@@ -1,0 +1,106 @@
+  
+    .Cuadro1 {
+        float: right;
+        width: 40vw;
+        height: 43vh;   
+        margin: 1rem;
+        border-radius: 1%;
+    }
+
+
+  .header1 {
+    background-color: rgb(197, 143, 98);
+    padding: 10px;
+    border: 1px solid transparent;
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: ghostwhite;
+  }
+    .Logo1 {
+        width:230px;
+        height: 250px;    
+        overflow: hidden;
+    }
+   a{
+    font-size: 2.3vh;
+    color: black;
+    text-shadow: -1px -1px 2px #ffffff;
+  }
+
+  .quoteNav{
+    background-color: rgb(119, 61, 35);
+    color: aliceblue;
+    padding: 3.5px;
+  }
+  .container1{
+    background-color:rgb(138, 96, 19);
+    border: 1px solid transparent;
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+  }
+
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .column{
+    flex: 33.33%;
+    padding: 5px;
+  }
+  .column img{
+    width: 100%;
+    height: 43vh;
+    border-radius: 1%;
+  
+  }
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgb(193, 149, 91);
+    border: 1px solid transparent;
+    margin: 1rem;
+    border-radius: 1%;  
+  }
+  .cards figure{
+    margin: 0;
+    width: 20vw;
+  }
+  .cards img{
+    width: 25vh;
+    height: 30vh;
+    border-radius: 1%;
+  }
+  
+  .buyButton {
+  display: flex;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  
+  }
+ 
+  .containerProd{
+    display: flex;
+    flex:content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 1%;
+  }
+
+
+

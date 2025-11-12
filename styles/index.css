@@ -1,0 +1,133 @@
+  
+    .Cuadro1 {
+        float: right;
+        width: 40vw;
+        height: 43vh;   
+        margin: 1rem;
+        border-radius: 1%;
+    }
+
+
+  .header1 {
+    background-color: rgb(197, 143, 98);
+    padding: 10px;
+    border: 1px solid transparent;
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: ghostwhite;
+  }
+    .Logo1 {
+        width:230px;
+        height: 250px;    
+        overflow: hidden;
+    }
+  a{
+    font-size: 2.3vh;
+    color: black;
+    text-shadow: -1px -1px 2px #ffffff;
+  }
+
+  .quoteNav{
+    background-color: rgb(119, 61, 35);
+    color: aliceblue;
+    padding: 3.5px;
+  }
+  .container1{
+    background-color:rgb(138, 96, 19);
+    border: 1px solid transparent;
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+  }
+
+  .container2{
+    background-color: rgb(193, 149, 91);
+    border: 1px solid transparent;
+    display: flex;
+
+  }
+
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+  .column{
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    
+  }
+  .column img{
+    max-width: 100%;
+    width: 25vw;
+    height: 70vh;
+    border-radius: 1%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    object-fit: cover;
+
+  }
+
+
+
+ .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
+ }
+ 
+
+.phrase1  h2 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: rgba(255, 248, 226, 0.767);
+  padding: 1.5vw;
+  margin: 1vh;
+}
+h3{
+  margin: 1vh;
+  padding: 15px;
+  font-size: 2.5vh;
+  color: rgba(255, 248, 226, 0.767);
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.phrase1{
+  padding: 10px;
+}
+.button1{
+    margin-left: 30px;
+    font-size: 2.5vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    box-shadow: inset;
+
+}
+
+.cards figcaption{
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 100%;
+  display: block;
+  color:rgb(51, 54, 58);
+  font-size: 3vh;
+  
+
+}
+
+
