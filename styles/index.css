@@ -1,4 +1,43 @@
-  
+  html, body{
+    height: 100%;
+    margin: 0;
+  }
+
+  body{
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(240, 240, 240);
+  }
+
+  body::before{
+    --bg-url: url('/resources/Index_background.jpg');
+    --bg-blur: 3px; 
+
+    content: "";
+    position:fixed;
+    inset: 0px; /* top:0; right:0; bottom:0; left:0; */
+    background-image: var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* cover usually works better when blurring */
+    filter: blur(var(--bg-blur));
+    transform: scale(1.05); /* avoids visible edges after blur */
+    z-index: -1; /* put behind page content */
+    pointer-events: none;
+  }
+
+  /* Optional: subtle overlay to improve text contrast */
+  body::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.03); /* tweak color/opacity as needed */
+    z-index: -1;
+    pointer-events: none;
+  }
+    
+    
+    
     .Cuadro1 {
         float: right;
         width: 40vw;
@@ -9,7 +48,7 @@
 
 
   .header1 {
-    background-color: rgb(197, 143, 98);
+    
     padding: 10px;
     border: 1px solid transparent;
     flex: auto;
@@ -22,8 +61,8 @@
     color: ghostwhite;
   }
     .Logo1 {
-        width:230px;
-        height: 250px;    
+        width:150px;
+        height: 100px;    
         overflow: hidden;
     }
   a{
@@ -33,12 +72,12 @@
   }
 
   .quoteNav{
-    background-color: rgb(119, 61, 35);
+    
     color: aliceblue;
     padding: 3.5px;
   }
   .container1{
-    background-color:rgb(138, 96, 19);
+    
     border: 1px solid transparent;
     display: flex;
     flex-wrap:nowrap;
@@ -46,7 +85,7 @@
   }
 
   .container2{
-    background-color: rgb(193, 149, 91);
+    background-color: rgb(116, 93, 63);
     border: 1px solid transparent;
     display: flex;
 
