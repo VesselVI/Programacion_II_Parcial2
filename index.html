@@ -17,9 +17,18 @@
     <div class="header1">
         <div class="navHeader">
 
-             <strong> <a href="index.html" style="margin: 9px; text-decoration: none;" class="tab">Inicio</a></strong>
-            <strong> <a href="/Tabs/productos.html" style="margin: 9px; text-decoration: none;"; class="tab">Productos</a></strong>
+            
            
+            <div class="toggle-menu-btn">
+                <i class='bx bx-menu-alt-left'></i>
+            </div>
+
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="/Tabs/productos.html">Productos</a></li>
+                </ul>
+            </div>
         </div> 
         <div class="logoHeader">
         
@@ -82,6 +91,30 @@
 
 
     </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-menu-btn');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+
+        // Toggle dropdown menu when button is clicked
+        toggleBtn.addEventListener('click', function() {
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Close dropdown when a link is clicked
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                dropdownMenu.classList.remove('active');
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.navHeader')) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 
 <footer>
