@@ -1,4 +1,46 @@
   
+      html, body{
+    height: 100%;
+    margin: 0;
+  }
+
+  body{
+    position: relative;
+    min-height: 100vh;
+    background-color: rgb(242, 240, 240);
+  }
+
+  body::before{
+    --bg-url: url('/resources/background-products.jpg');
+    --bg-blur: 3px; 
+    content: "";
+    position:fixed;
+    inset: 0px; 
+    background-image: var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    filter: blur(var(--bg-blur));
+    transform: scale(0.1);
+    /* push the image behind the overlay */
+    z-index: -2; 
+    pointer-events: none;
+    
+  }
+
+  
+  body::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    /* dark overlay placed above the blurred image but below page content */
+    background: rgba(0,0,0,0.5); /* adjust alpha (0.0 - 1.0) to control darkness */
+    z-index: -1;
+    pointer-events: none;
+  }
+    
+    
+    
     .Cuadro1 {
         float: right;
         width: 40vw;
@@ -9,7 +51,7 @@
 
 
   .header1 {
-    background-color: rgb(197, 143, 98);
+    
     padding: 10px;
     border: 1px solid transparent;
     flex: auto;
@@ -17,90 +59,253 @@
     align-items: center;
     justify-content: space-between;
     height: 5vh;
+    text-decoration: none;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: ghostwhite;
   }
-    .Logo1 {
+  
+  .navHeader {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navHeader > a {
+    display: none;
+  }
+  
+  
+  .Logo1 {
         width:230px;
-        height: 250px;    
-        overflow: hidden;
-    }
-   a{
+        height: 70px;    
+      overflow: hidden;
+      color: white;
+      filter: brightness(0) saturate(100%) invert(1);
+      transition: filter 180ms ease;
+      padding-top: 20px;
+      
+   }
+  
+    a{
     font-size: 2.3vh;
-    color: black;
-    text-shadow: -1px -1px 2px #ffffff;
+    color: rgb(253, 250, 250);
+    text-shadow: 2px 2px 2px #171616;
   }
 
   .quoteNav{
-    background-color: rgb(119, 61, 35);
+    
     color: aliceblue;
     padding: 3.5px;
   }
   .container1{
-    background-color:rgb(138, 96, 19);
+    
     border: 1px solid transparent;
     display: flex;
     flex-wrap:nowrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+
+  .container2{
+   /* background-color: rgb(164, 130, 100);
+*/   border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+
   }
 
   .row{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
   }
   .column{
-    flex: 33.33%;
-    padding: 5px;
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    
   }
   .column img{
-    width: 100%;
-    height: 43vh;
+    max-width: 100%;
+    width: 25vw;
+    height: 70vh;
     border-radius: 1%;
-  
-  }
-  .cards{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    object-fit: cover;
 
-    justify-content: center;
-    padding: 1rem;
-    background-color: rgb(193, 149, 91);
-    border: 1px solid transparent;
-    margin: 1rem;
-    border-radius: 1%;  
   }
-  .cards figure{
-    margin: 0;
-    width: 20vw;
-  }
-  .cards img{
-    width: 25vh;
-    height: 30vh;
-    border-radius: 1%;
-  }
-  
-  .buyButton {
-  display: flex;
-  margin: 1rem auto;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  
-  }
- 
-  .containerProd{
+
+
+
+ .cards{
     display: flex;
-    flex:content;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0px;
     text-align: center;
-    padding: 10px;
     margin: 0px;
-    border-radius: 1%;
-  }
+    
+  
+ }
 
+ .cards img:hover{
+  transform: translateY(-10px);
+   box-shadow:5px 5px 15px #000000;
+   transition: 0.4s;
+   cursor: pointer;
+  
+ }
+ .cards img{
+  height: 400px;
+ }
 
+ 
 
+.phrase1  h2 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  color: rgba(255, 248, 226, 0.767);
+  padding: 3vw;
+  margin: 2vh;
+}
+.phrase1 h3{
+  margin: 1vh;
+  padding: 4px;
+  font-size: 3vh;
+  color: rgba(255, 248, 226, 0.767);
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.phrase1{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.catalog-button{
+    
+    font-size: 5vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    justify-content: center;
+    border-style: solid;
+    color: #ffffffae;
+    border-color: rgba(248, 248, 248, 0.677);
+    margin: 20px;
+    padding: 5px 20px 5px 20px;
+}
+.catalog-button:hover{
+  cursor: pointer;
+}
+
+.cards figcaption{
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 100%;
+  display: block;
+  color:rgb(51, 54, 58);
+  font-size: 3vh;
+  
+
+}
+.cart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.cart a{
+  
+  text-decoration: none;
+  color: white;
+  
+ 
+}
+.carrito-text{
+  margin-bottom: 5px;
+}
+
+.logo-cart a{
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.883);
+}
+
+.buyButton{
+  font-size: 20px;
+  padding: 4px;
+  margin: 10px;
+  width: 100px;
+  border-style: inset;
+  border-radius: 3.3px;
+  box-shadow:3px 3px 4px #000000;
+  font-family:Arial, Helvetica, sans-serif;
+  
+}
+.buyButton
+
+.buyButton:hover{
+  cursor: pointer;
+}
+
+/* Toggle Menu Button */
+.toggle-menu-btn{
+  display: block;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li{
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu li:last-child{
+  border-bottom: none;
+}
+
+.dropdown-menu a{
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.dropdown-menu a:hover{
+  color: orangered;
+}
+
+/* Show dropdown when active */
+.dropdown-menu.active{
+  display: block;
+}

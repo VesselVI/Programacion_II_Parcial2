@@ -111,6 +111,7 @@
     background-color: rgb(164, 130, 100);
     border: 1px solid transparent;
     display: flex;
+    justify-content: center;
 
   }
 
@@ -150,6 +151,7 @@
     padding: 0px;
     text-align: center;
     margin: 0px;
+    
     
   
  }
