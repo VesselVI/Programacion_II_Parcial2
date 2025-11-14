@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" type="text/css" href="/styles/carrito.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Carrito</title>
+</head>
+<body>
+    
+    
+   
+    <div class="header1">
+        <div class="navHeader">
+
+            
+           
+            <div class="toggle-menu-btn">
+                <i class='bx bx-menu-alt-left'></i>
+            </div>
+
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="/tabs/productos.html">Productos</a></li>
+                </ul>
+            </div>
+        </div> 
+        <div class="logoHeader">
+        
+                <img src="/resources/Logo_wardrobe.png" alt="logo_homeDecor" class="Logo1">
+
+        </div>
+        <div class="cart">
+            <div class="carrito-text">
+                     <strong> <a href="#"   class="tab">Carrito</a></strong>
+             </div>
+             <div class="logo-cart">
+                   <a href="#"> <i class='bx bx-cart'></i></a>
+            </div>
+        </div>
+
+                   
+    </div>
+       
+   
+<!--     
+           <strong> <a href="index.html" style="margin: 1rem; text-decoration: none;" class="tab">Inicio</a></strong>
+            <strong> <a href="/Tabs/productos.html" style="margin: 1rem; text-decoration: none;"; class="tab">Productos</a></strong>
+            <strong> <a href="/Tabs/Contacto.html"  style="margin: 1rem; text-decoration: none"; class="tab">Contacto</a></strong> -->
+  
+
+    <div class="container2">
+       <table>
+  <tr>
+    <th>Nombre del Producto</th>
+    <th>Precio</th>
+
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+
+  <tr>
+    <th>Total</th>
+  </tr>
+</table>
+
+
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-menu-btn');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
+
+        // Toggle dropdown menu when button is clicked
+        toggleBtn.addEventListener('click', function() {
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Close dropdown when a link is clicked
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                dropdownMenu.classList.remove('active');
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.navHeader')) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+<footer>
+    <p>Hecho por Ignacio Caram
+    </p>
+</footer>
+</html>
