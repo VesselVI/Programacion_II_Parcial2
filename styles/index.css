@@ -21,7 +21,6 @@
     background-size: cover; 
     filter: blur(var(--bg-blur));
     transform: scale(1.05);
-    /* push the image behind the overlay */
     z-index: -2; 
     pointer-events: none;
     
@@ -32,8 +31,7 @@
     content: "";
     position: fixed;
     inset: 0;
-    /* dark overlay placed above the blurred image but below page content */
-    background: rgba(0,0,0,0.45); /* adjust alpha (0.0 - 1.0) to control darkness */
+    background: rgba(0,0,0,0.45); 
     z-index: -1;
     pointer-events: none;
   }
@@ -74,6 +72,11 @@
     display: none;
   }
   
+  .logoHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
   
   .Logo1 {
         width:230px;
@@ -105,6 +108,7 @@
     justify-content: center;
     align-items: center;
     height: 70vh;
+    
   }
 
   .container2{
@@ -152,7 +156,6 @@
     text-align: center;
     margin: 0px;
     
-    
   
  }
 
@@ -164,7 +167,7 @@
   
  }
  .cards img{
-  height: 400px;
+  height: 500px;
  }
 
  
@@ -259,7 +262,7 @@
   cursor: pointer;
 }
 
-/* Toggle Menu Button */
+
 .toggle-menu-btn{
   display: block;
   font-size: 2rem;
@@ -268,7 +271,7 @@
   margin-left: 15px;
 }
 
-/* Dropdown Menu */
+
 .dropdown-menu{
   display: none;
   position: absolute;
@@ -278,6 +281,7 @@
   min-width: 200px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  transform: ease;
 }
 
 .dropdown-menu ul{
@@ -305,7 +309,38 @@
   color: orangered;
 }
 
-/* Show dropdown when active */
 .dropdown-menu.active{
   display: block;
 }
+
+
+.animation-logo {
+  width: 60px;
+  height: 70px;
+  background-image: url('/resources/organic-flat-animation-frames-element.png');
+  background-repeat: no-repeat;
+  background-size: calc(60px * 3) calc(70px * 3);
+--offsetX: 5px;
+--offsetY: -25px;
+  animation: explosion 1s steps(1) infinite;
+}
+
+
+@keyframes explosion {
+  0%   { background-position: calc(var(--offsetX) +   0px) calc(var(--offsetY) +   0px); }
+  11%  { background-position: calc(var(--offsetX) -  60px) calc(var(--offsetY) +   0px); }
+  22%  { background-position: calc(var(--offsetX) - 120px) calc(var(--offsetY) +   0px); }
+
+  33%  { background-position: calc(var(--offsetX) +   0px) calc(var(--offsetY) -  70px); }
+  44%  { background-position: calc(var(--offsetX) -  60px) calc(var(--offsetY) -  70px); }
+  55%  { background-position: calc(var(--offsetX) - 120px) calc(var(--offsetY) -  70px); }
+
+  66%  { background-position: calc(var(--offsetX) +   0px) calc(var(--offsetY) - 140px); }
+  77%  { background-position: calc(var(--offsetX) -  60px) calc(var(--offsetY) - 140px); }
+  100% { background-position: calc(var(--offsetX) - 120px) calc(var(--offsetY) - 140px); }
+}
+
+.logo-container{
+  display: flex
+}
+

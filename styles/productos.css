@@ -113,6 +113,7 @@
 */   border: 1px solid transparent;
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
 
   }
 
@@ -164,7 +165,7 @@
   
  }
  .cards img{
-  height: 400px;
+  height: 500px;
  }
 
  
@@ -308,4 +309,8 @@
 /* Show dropdown when active */
 .dropdown-menu.active{
   display: block;
+}
+
+.buyButton:hover{
+  cursor: pointer;
 }
