@@ -98,19 +98,17 @@
         const dropdownMenu = document.querySelector('.dropdown-menu');
         const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
 
-        // Toggle dropdown menu when button is clicked
+        
         toggleBtn.addEventListener('click', function() {
             dropdownMenu.classList.toggle('active');
         });
 
-        // Close dropdown when a link is clicked
         dropdownLinks.forEach(link => {
             link.addEventListener('click', function() {
                 dropdownMenu.classList.remove('active');
             });
         });
 
-        // Close dropdown when clicking outside
         document.addEventListener('click', function(event) {
             if (!event.target.closest('.navHeader')) {
                 dropdownMenu.classList.remove('active');
