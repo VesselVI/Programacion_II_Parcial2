@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" type="text/css" href="/styles/productos.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Productos</title>
 </head>
-<body>
+<body class="">
     
-   
+<div class="container">
     <div class="header1">
         <div class="navHeader">
 
@@ -36,103 +35,53 @@
 
         </div>
         <div class="cart">
-            <div class="carrito-text">
-                     <strong> <a href="/tabs/carrito.html"   class="tab">Carrito</a></strong>
-             </div>
+           
              <div class="logo-cart">
-                   <a href="/tabs/carrito.html"> <i class='bx bx-cart'></i></a>
+                   <a> <i class='bx bx-cart'></i></a>
             </div>
         </div>
 
                    
     </div>
-       
-   
-<!--     
-           <strong> <a href="index.html" style="margin: 1rem; text-decoration: none;" class="tab">Inicio</a></strong>
-            <strong> <a href="/Tabs/productos.html" style="margin: 1rem; text-decoration: none;"; class="tab">Productos</a></strong>
-            <strong> <a href="/Tabs/Contacto.html"  style="margin: 1rem; text-decoration: none"; class="tab">Contacto</a></strong> -->
- 
-
-    <div class="container2">
-        <div class="row">
+        
             
-            <div class="column">
-                <figure class="cards">
-                    <img src="/resources/kawai-hoodie.avif" alt="Painting test1" id="p1">
-                    <figcaption>Emacril Membrana Liquida Emapi X 20 Kg</figcaption>
-                </figure>
-                <button class="buyButton">Comprar</button>
+        <div class="listProduct">
+            <div class="item">
+                <img src="/resources/kawai-hoodie.avif" alt="Painting test1" id="p1">
+                <h2>NAME PRODUCT</h2>
+                <div class="price">$200</div>
+                <button class="addCart">Comprar</button>
             </div>
-             <div class="column">
-                <figure class="cards">
-                    <img src="/resources/brown-tshirt.avif" alt="Paintng test2" id="p2">
-                    <figcaption>Membrana Poliuretanica Supercapa Venier...</figcaption>
-                </figure>
-                <button class="buyButton">Comprar</button>
-            </div>
-            <div class="column">
-                <figure class="cards">
-                    <img src="/resources/lightbrown-blazer.avif" alt="Painting test3" id="p3">
-                    <figcaption>Sikafill Techos Membrana Liquida X 20 Kg</figcaption>
-                </figure>
-                <button class="buyButton">Comprar</button>
-            </div>
-
+            
         </div>
 
-         <div class="row">
-            
-            <div class="column">
-                <figure class="cards">
-                    <img src="/resources/black-tshirt.avif" alt="Painting test1" id="p1">
-                    <figcaption>Emacril Membrana Liquida Emapi X 20 Kg</figcaption>
-                </figure>
-                <button class="buyButton">Comprar</button>
+         <div class="cartTab">
+            <h1>Carrito</h1>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="/resources/black-tshirt.avif" alt="">
+                    </div>
+                    <div class="name">NombreProducto</div>
+                    <div class="totalPrice">$200</div>
+                    <div class="quantity">
+                        <span class="minus"><</span>
+                        <span>1</span>
+                        <span class="plus">></span>
+                    </div>
+                </div>
             </div>
-             <div class="column">
-                <figure class="cards">
-                    <img src="/resources/cream-shirt.avif" alt="Paintng test2" id="p2">
-                    <figcaption>Membrana Poliuretanica Supercapa Venier...</figcaption>
-                </figure>
-                <button class="buyButton">Comprar</button>
+            <div class="btn">
+                <button class="close">CERRAR</button>
+                <button class = "checkOut">Finalizar Compra</button>
             </div>
-            <div class="column">
-                <figure class="cards">
-                    <img src="/resources/lightblue-hoodie.avif" alt="Painting test3" id="p3">
-                    <figcaption>Sikafill Techos Membrana Liquida X 20 Kg</figcaption>
-                </figure>
-                <button class="buyButton">Comprar</button>
-            </div>
+         </div>
 
-        </div>
+     </div>   
 
-
-
-    </div>
-    <script>
-        const toggleBtn = document.querySelector('.toggle-menu-btn');
-        const dropdownMenu = document.querySelector('.dropdown-menu');
-        const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
-
-        // Toggle dropdown menu when button is clicked
-        toggleBtn.addEventListener('click', function() {
-            dropdownMenu.classList.toggle('active');
-        });
-
-        // Close dropdown when a link is clicked
-        dropdownLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                dropdownMenu.classList.remove('active');
-            });
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!event.target.closest('.navHeader')) {
-                dropdownMenu.classList.remove('active');
-            }
-        });
+    
+    <script src="/carrito.js">
+        
     </script>
 </body>
 
