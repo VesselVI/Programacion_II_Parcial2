@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Remera negra basica",
         "price": 200,
-        "image": "resources/black-tshirt.avif"
+        "image": "/resources/black-tshirt.avif"
 
     },
     {
@@ -11,14 +11,14 @@
         "id": 2,
         "name": "Sweater marron basico",
         "price": 250,
-        "image": "resources/brown-tshirt.avif"
+        "image": "/resources/brown-tshirt.avif"
     },
     
     {
         "id": 3,
         "name": "Sweater blanco basico",
         "price": 360,
-        "image": "resources/cream-shirt.avif"
+        "image": "/resources/cream-shirt.avif"
 
     },
     
@@ -26,7 +26,7 @@
         "id": 4,
         "name": "Hoodie kawai",
         "price": 400,
-        "image": "resources/kawai-hoodie.avif"
+        "image": "/resources/kawai-hoodie.avif"
 
     },
     
@@ -34,7 +34,7 @@
         "id": 5,
         "name": "Sweater celeste",
         "price": 150,
-        "image": "resources/lightblue-hoodie.avif"
+        "image": "/resources/lightblue-hoodie.avif"
 
     },
     
@@ -42,7 +42,7 @@
         "id": 6,
         "name": "Blazer marron coquette",
         "price": 630,
-        "image": "resources/lightbrown-blazer.avif"
+        "image": "/resources/lightbrown-blazer.avif"
 
     }
 ]
