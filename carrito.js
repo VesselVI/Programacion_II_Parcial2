@@ -20,7 +20,7 @@ const toggleBtn = document.querySelector('.toggle-menu-btn');
                 dropdownMenu.classList.remove('active');
             }
         });
-
+ 
 
         let icontCart = document.querySelector('.logo-cart');
         let closeCart = document.querySelector('.close');
